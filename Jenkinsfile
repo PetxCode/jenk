@@ -3,6 +3,12 @@ pipeline{
 
     stages {
         stage('buldiing'){
+
+            agent {
+                docker {
+                    image 'node:18-apline'
+                }
+            }
             
             steps{
                 sh ''' 
