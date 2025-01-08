@@ -8,6 +8,8 @@ pipeline{
                 sh ''' 
 
                 echo "start here"
+                npm -v
+                node -v
             '''
             }
         }
