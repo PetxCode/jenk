@@ -2,8 +2,8 @@ pipeline{
     agent any
 
     stages {
-        stage('buldiing'){
 
+        stage('buldiing'){
             agent {
                 docker {
                     image 'node:18-alpine'
@@ -25,25 +25,24 @@ pipeline{
             '''
             }
         }
-        stage('deploy'){
 
-            agent {
-                docker {
-                    image 'node:18-alpine'
-                    reuseNode true
-                }
-            }
+        stage('deploy'){
+            // agent {
+            //     docker {
+            //         image 'node:18-alpine'
+            //         reuseNode true
+            //     }
+            // }
             
             steps{
                 sh ''' 
 
                 echo "start deploy here with Netlify"
-                npm install netlify-cli -g
-
-                netlify --version
+                
 
             '''
             }
         }
+        
     }
 }
