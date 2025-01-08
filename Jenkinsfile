@@ -34,6 +34,7 @@ pipeline{
                     npm -v
                     npm install netlify-cli
                     node_modules/.bin/netlify -v
+                    echo "Running to production siteID: $NETLIFY_SITE_ID"
                     node_modules/.bin/netlify status
                     
                 '''
