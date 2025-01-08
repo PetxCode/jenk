@@ -39,6 +39,8 @@ pipeline{
                     
                     node_modules/.bin/netlify deploy --dir=dist --prod
                     node_modules/.bin/netlify status
+
+                    echo "Done"
                 '''
             }
         }
