@@ -20,6 +20,9 @@ pipeline{
 
                 npm ci
                 npm run build
+                npm run preview
+
+                ls -la
             '''
             }
         }
