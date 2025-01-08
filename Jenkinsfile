@@ -20,9 +20,28 @@ pipeline{
 
                 npm ci
                 npm run build
-                npm run preview
 
                 ls -la
+            '''
+            }
+        }
+        stage('deploy'){
+
+            agent {
+                docker {
+                    image 'node:18-alpine'
+                    reuseNode true
+                }
+            }
+            
+            steps{
+                sh ''' 
+
+                echo "start deploy here"
+                npm install netlify-cli-g
+
+                netlify --version
+
             '''
             }
         }
