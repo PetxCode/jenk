@@ -37,6 +37,7 @@ pipeline{
                     echo "Running to production siteID: $NETLIFY_SITE_ID"
                     node_modules/.bin/netlify status
                     
+                    node_modules/.bin/netlify deploy --dir=dist --prod
                 '''
             }
         }
