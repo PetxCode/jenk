@@ -19,7 +19,7 @@ function App() {
       <h1>Peter + React + Pipeline</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
-          press {count} times
+          press {count} times make sense!!!
         </button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
