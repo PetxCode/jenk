@@ -22,23 +22,7 @@ pipeline {
         }   
     }
         
-        stage('deploy') {
-            agent {
-                docker {
-                    image 'node:18-alpine'
-                    reuseNode true
-            }
-            
-             steps {
-                sh '''
-                    node -v
-                    npm insall netlify-cli -g
-                    netlify -v
-                    
-                '''
-            }
-        }   
-    }
+        
 
 
     }
