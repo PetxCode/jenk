@@ -38,7 +38,7 @@ pipeline{
                 sh ''' 
 
                 echo "start deploy here"
-                npm install netlify-cli-g
+                npm install netlify-cli -g
 
                 netlify --version
 
