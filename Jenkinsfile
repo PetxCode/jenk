@@ -7,6 +7,7 @@ pipeline{
             agent {
                 docker {
                     image 'node:18-alpine'
+                    reuseNode true
                 }
             }
             
@@ -16,6 +17,9 @@ pipeline{
                 echo "start here"
                 npm -v
                 node -v
+
+                npm ci
+                npm run build
             '''
             }
         }
