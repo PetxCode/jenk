@@ -28,9 +28,9 @@ pipeline{
             steps{
                 sh '''
                     npm -v
-                    npm install netlify-cli -g
+                    npm install netlify-cli
 
-                    netlify -v
+                    node_modules/.bin/netlify -v
                 '''
             }
         }
