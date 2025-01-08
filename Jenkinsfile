@@ -1,12 +1,15 @@
 pipeline{
     agent any
 
-    statges {
+    stages {
         stage('buldiing'){
-            sh ''' 
+            
+            steps{
+                sh ''' 
 
                 echo "start here"
             '''
+            }
         }
     }
 }
